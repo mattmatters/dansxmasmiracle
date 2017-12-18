@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
         <title>Dan is a Bubkis</title>
         <meta name="description" content="Any day... Any time... Still bubkis." />
         <meta author="Matt Lewis" />
@@ -20,7 +21,7 @@
         </section>
         <section id="history" class="contain">
             <div>
-                <svg width="200" height="200">
+                <svg id="clock" width="200" height="200">
                     <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
                         <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
                         <feOffset in="blur" dx="2.5" dy="2.5"/>
@@ -64,24 +65,15 @@
             </div>
         </section>
         <section id="contact" class="contain">
-            <h3>Further Help</h3>
-            <p>
+            <h3 class="sub-header">Further Help</h3>
+            <p class="get-help">
                 If someone you know has been afflicted with the bubkis, please
                 contact your local developer.
-            </p>
-            <p>
-                Since the ripe age of 8, Dan has been known as a serious bubkis.
-                Logic would dictate that he would eventually grow out of his bubkis
-                phase.  But as of <span id="time-to-bubkis">2017</span> there has
-                been little change.
             </p>
         </section>
     </body>
     <script>
      var date = new Date();
-     date = date.getYear(); //toLocaleString('en-US', { hour12: false });
-     document.getElementById('time-to-bubkis').innerHTML = date;
-
      var hands = [
          document.querySelector('#secondhand > *'),
          document.querySelector('#minutehand > *'),
